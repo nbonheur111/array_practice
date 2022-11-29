@@ -168,7 +168,7 @@ console.log(party);
 
 //7 Timothy and Sarah have been recruiting. Add a new adventurer to the party.
 
-let newAdventurer = (names) => {
+const newAdventurer = (names) => {
     let newAdv = {
         name: undefined,
         hitpoints: 30,
@@ -185,3 +185,51 @@ let newAdventurer = (names) => {
 newAdventurer("liz");
 
 console.log(party);
+
+
+//8 the party has been doing well. split gold evenly between everyone.
+
+const newProperty = (gold) => {
+    
+    party.forEach(person => {
+        person.gold = Math.round(gold/3);
+    });
+}
+newProperty(210);
+console.log(party);
+
+//9 .substract some of sarah's gold and replace her jellyfish
+
+party.forEach(person => {
+    if (person.name == "sarah"){
+        person.companion = "bear";
+    }
+    
+});
+
+console.log(party);
+
+//10. Timothy's sword has gotten old. Changing its name to "Rusty Sword"
+
+party.forEach(person => {
+    if(person.name.toLocaleLowerCase()== "timothy"){
+        person.belongings[0] = "Rusty Sword";
+    }
+
+})
+console.log(party);
+
+//choosing a leader of the group
+
+const setLeader = (name) => {
+    party.forEach(person => {
+        if(person.name.toLocaleLowerCase()== name.toLocaleLowerCase()){
+            person.leader = true;
+        }else{
+            person.leader = false;
+        }
+        
+    });
+}
+setLeader("SarAh");
+console.log(party)
