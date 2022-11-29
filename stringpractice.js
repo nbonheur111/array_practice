@@ -43,6 +43,8 @@ const doubleHitPoints = () => {
 doubleHitPoints();
 
 
+
+
 // Prompt 2: Timothy has been hit with an arrow, subtract 5 points from his hp
 const substractFromTimothy = () => {
     party.forEach(element => {
@@ -70,6 +72,7 @@ const changeSarahComp = () =>{
 changeSarahComp();
 
 
+
 //Prompt 4: Timothy drank this potion. Raise his hitpoints by 20 and remove "potion" from his belongings.
 
 const raiseTimPotion = () => {
@@ -84,6 +87,7 @@ const raiseTimPotion = () => {
 
 }
 raiseTimPotion();
+
 
 
 //Prompt 5: Timothy got hungry and stole Joline's bread. Take it out of her belongings and put it  into Timothy's belongings.
@@ -104,16 +108,17 @@ timStealsBread();
 
 
 //Prompt 6: Joline got upset and left the party. Take her out of the array.
-const removeJoline = () => {
+const removeJoline = (names) => {
     party.forEach(element => {
-        if(element.name.toLocaleLowerCase()==  "joline"){
+        if(element.name.toLocaleLowerCase()==  names.toLocaleLowerCase()){
             party.splice(0,1);
         }
         
     });
 
 }
-removeJoline();
+removeJoline("joline");
+console.log(party);
 
 
 //Prompt 7: Timothy and Sarah have been recruiting. Add a new adventurer to the party.
@@ -133,6 +138,7 @@ const newAdventurer = (names) => {
     party.push(newAdv);
 }
 newAdventurer("liz");
+console.log(party);
 
 
 
@@ -181,6 +187,6 @@ const setLeader = (name) => {
         
     });
 }
-setLeader("SarAh");
-console.log()
+setLeader("sarah");
+console.log(party)
 
