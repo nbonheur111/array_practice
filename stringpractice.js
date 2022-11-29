@@ -1,54 +1,4 @@
-const feast = (beast, dish) => {
-    let animalName = beast.toUpperCase();
-    let dishName = dish.toUpperCase();
-
-    if (animalName.charAt(0) == dishName.charAt(0)) {
-        if(animalName.charAt(animalName.length-1)== dishName.charAt( dishName.length-1)){
-            return true;
-        }
-      
-    } else {
-      return false;
-    }
-  } 
-  console.log(feast("cat", "fat"));
-
-    // calculate the average of an array in JavaScript:
-function getAverage(marks){
-  
-    // 1. Sum all the values of the array.
-    // 2. Divide the sum by the length of the array.
-  return Math.floor(marks.reduce((a, b) => a + b) / marks.length);
-}
-console.log(getAverage([2,4,6,8,10]));
-
-//convert a string to an array
-const string = 'word';
-string.split('');
-[...string];
-Array.from(string);
-Object.assign([], string);
-
-  //It's the academic year's end, fateful moment of your school report. The averages must be calculated. All the students come to you and entreat you to calculate their average for them. Easy ! You just need to write a script.
-
-// Return the average of the given array rounded down to its nearest integer.
-
-// The array will never be empty.
-
-const studenAverage = (array) => {
-    let sum = 0;
-    if(array.length > 0){
-        array.forEach(element => {
-            sum+=element; 
-        });
-        return Math.round(sum /array.length);
-    }
-    
-}
-console.log(studenAverage([1,2,3,4,5,6,7,8,9]));
-
-    // feast = (beast, dish) => beast[0] == dish[0] && beast[beast.length -1] == dish[dish.length -1]
-//for, for each, map used to iterate. for each does not return anything.
+//Party Array(Objects Homework)
 
 let party = [
     {
@@ -91,7 +41,7 @@ const doubleHitPoints = () => {
 
 }
 doubleHitPoints();
-console.log(party)
+
 
 // Prompt 2: Timothy has been hit with an arrow, subtract 5 points from his hp
 const substractFromTimothy = () => {
@@ -105,7 +55,7 @@ const substractFromTimothy = () => {
 
 }
 substractFromTimothy();
-console.log(party);
+
 
 //Prompt 3: Sarah's tiger has been turned into a jellyfish by a wizard, please change it
 const changeSarahComp = () =>{
@@ -118,7 +68,7 @@ const changeSarahComp = () =>{
 
 }
 changeSarahComp();
-console.log(party);
+
 
 //Prompt 4: Timothy drank this potion. Raise his hitpoints by 20 and remove "potion" from his belongings.
 
@@ -134,7 +84,7 @@ const raiseTimPotion = () => {
 
 }
 raiseTimPotion();
-console.log(party);
+
 
 //Prompt 5: Timothy got hungry and stole Joline's bread. Take it out of her belongings and put it  into Timothy's belongings.
 const timStealsBread = () => {
@@ -151,7 +101,7 @@ const timStealsBread = () => {
 
 }
 timStealsBread();
-console.log(party);
+
 
 //Prompt 6: Joline got upset and left the party. Take her out of the array.
 const removeJoline = () => {
@@ -164,9 +114,9 @@ const removeJoline = () => {
 
 }
 removeJoline();
-console.log(party);
 
-//7 Timothy and Sarah have been recruiting. Add a new adventurer to the party.
+
+//Prompt 7: Timothy and Sarah have been recruiting. Add a new adventurer to the party.
 
 const newAdventurer = (names) => {
     let newAdv = {
@@ -184,10 +134,10 @@ const newAdventurer = (names) => {
 }
 newAdventurer("liz");
 
-console.log(party);
 
 
-//8 the party has been doing well. split gold evenly between everyone.
+
+//Prompt8: the party has been doing well. split gold evenly between everyone.
 
 const newProperty = (gold) => {
     
@@ -196,9 +146,9 @@ const newProperty = (gold) => {
     });
 }
 newProperty(210);
-console.log(party);
 
-//9 .substract some of sarah's gold and replace her jellyfish
+
+//Prompt 9: substract some of sarah's gold and replace her jellyfish
 
 party.forEach(person => {
     if (person.name == "sarah"){
@@ -207,9 +157,9 @@ party.forEach(person => {
     
 });
 
-console.log(party);
 
-//10. Timothy's sword has gotten old. Changing its name to "Rusty Sword"
+
+//Prompt 10: Timothy's sword has gotten old. Changing its name to "Rusty Sword"
 
 party.forEach(person => {
     if(person.name.toLocaleLowerCase()== "timothy"){
@@ -217,9 +167,9 @@ party.forEach(person => {
     }
 
 })
-console.log(party);
 
-//choosing a leader of the group
+
+//Prompt 11: choosing a leader of the group
 
 const setLeader = (name) => {
     party.forEach(person => {
@@ -232,4 +182,5 @@ const setLeader = (name) => {
     });
 }
 setLeader("SarAh");
-console.log(party)
+console.log()
+
